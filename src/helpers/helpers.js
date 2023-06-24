@@ -1,3 +1,5 @@
 import { parseArgs } from "./parseArgs.js";
-console.log(parseArgs(['', '', '--us=2']).getArgs);
-export { parseArgs };
+import { showWorkingDirectory } from "./showWorkingDirectory.js";
+import { operationFailedError, invalidInputError } from "./errorMessage.js";
+
+export { parseArgs, showWorkingDirectory, operationFailedError, invalidInputError };
