@@ -8,8 +8,15 @@ const internals = [...tools, ...multi, ...streams, ...async, ...network];
 
 for (const name of internals) node[name] = await import(`node:${name}`);
 node.process = process;
-node.fsp = node.fsp.promises;
-node.timers.promises = node['timers/promises'];
+node.chdir = node.process.chdir;
+node.nextTick = node.process.nextTick;
+node.exit = node.process.exit;
+node.argv = node.process.argv;
+node.stdin = node.process.stdin;
+node.stdout = node.process.stdout;
+node.homedir = node.os.homedir;
+node.fsp = node.fs.promises;
 Object.freeze(node);
 
-export { node };
+// export { process, argv };
+export default node;
