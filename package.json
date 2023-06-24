@@ -1,0 +1,23 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "This repository is the part of nodejs-assignments https://github.com/bo-mila/file-manager",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bo-mila/file-manager.git"
+  },
+  "keywords": [
+    "file-manager",
+    "bo-mila"
+  ],
+  "author": "bo-mila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bo-mila/file-manager/issues"
+  },
+  "homepage": "https://github.com/bo-mila/file-manager#readme"
+}
