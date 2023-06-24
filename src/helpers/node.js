@@ -17,6 +17,7 @@ node.stdin = node.process.stdin;
 node.cwd = node.process.cwd;
 node.stdout = node.process.stdout;
 node.homedir = node.os.homedir;
+node.resolve = node.path.resolve;
 node.fileURLToPath = node.url.fileURLToPath;
 node.fsp = node.fs.promises;
 Object.freeze(node);

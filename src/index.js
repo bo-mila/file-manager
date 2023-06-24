@@ -1,12 +1,13 @@
-import { handleInput, up, cd } from './handles/handles.js';
 import node from './helpers/node.js';
-import { parseArgs, showWorkingDirectory } from './helpers/helpers.js';
+import { handleInput, up, cd, ls } from './handles/handles.js';
+import { parseArgs } from './helpers/helpers.js';
 
 
 const dispatcher = {
   'cat': (data) => console.log(data),
   'up': () => up(),
   'cd': (args) => cd(args),
+  'ls': (args) => ls(args),
 }
 
 try {
@@ -19,7 +20,6 @@ try {
     if (data.toString().startsWith('.exit')) rl.close();
     else {
       handleInput(dispatcher, data);
-      showWorkingDirectory();
     }
   })
     .on('SIGINT', () => rl.close())

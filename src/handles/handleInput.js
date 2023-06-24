@@ -1,11 +1,12 @@
-import { invalidInputError } from '../helpers/helpers.js';
+import { invalidInputError, showWorkingDirectory } from '../helpers/helpers.js';
 
-const handleInput = (operationMap, input) => {
+const handleInput = async (operationMap, input) => {
   try {
     let [operation, ...args] = input.toString().trim().split(' ');
     args = args.filter(arg => arg !== '');
     if (operation in operationMap || args.length !== 0) {
-      operationMap[operation](args);
+      await operationMap[operation](args);
+      showWorkingDirectory();
     } else {
       throw new Error(invalidInputError`unknown operation`);
     }
