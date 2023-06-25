@@ -12,7 +12,6 @@ const cat = async (args) => {
   } catch (error) {
     throw new Error(operationFailedError`path is wrong`);
   }
-
 };
 
 export { cat };
