@@ -9,6 +9,8 @@ const add = async (args) => {
     fileDescriptor = await node.fsp.open(pathToFile, 'w');
   } catch (error) {
     throw new Error(operationFailedError`add operation is wrong`);
+  } finally {
+    fileDescriptor?.close();
   }
 };
 

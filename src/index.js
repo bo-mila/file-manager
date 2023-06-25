@@ -1,5 +1,5 @@
 import node from './helpers/node.js';
-import { handleInput, up, cd, ls, cat, add } from './handles/handles.js';
+import { handleInput, up, cd, ls, cat, add, rn } from './handles/handles.js';
 import { parseArgs } from './helpers/helpers.js';
 
 
@@ -9,6 +9,7 @@ const dispatcher = {
   'cd': (args) => cd(args),
   'ls': () => ls(),
   'add': (args) => add(args),
+  'rn': (args) => rn(args),
 }
 
 try {
@@ -25,7 +26,7 @@ try {
   })
     .on('SIGINT', () => rl.close())
     .on('close', () => {
-      node.stdout.write(`Thank you for using File Manager, ${userName}, goodbye!\n`);
+      node.stdout.write(`\nThank you for using File Manager, ${userName}, goodbye!\n`);
       node.nextTick(() => node.exit());
     });
 } catch (error) {

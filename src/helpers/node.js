@@ -21,6 +21,7 @@ node.resolve = node.path.resolve;
 node.fileURLToPath = node.url.fileURLToPath;
 node.createReadStream = node.fs.createReadStream;
 node.fsp = node.fs.promises;
+node.parse = node.path.parse;
 Object.freeze(node);
 
 export default node;
