@@ -6,13 +6,13 @@ const handleInput = async (operationMap, input) => {
     args = args.filter(arg => arg !== '');
     if (operation in operationMap || args.length !== 0) {
       await operationMap[operation](args);
-      showWorkingDirectory();
     } else {
       throw new Error(invalidInputError`unknown operation`);
     }
   } catch(error) {
     console.error(error.message);
   }
+  showWorkingDirectory();
 };
 
 export { handleInput };

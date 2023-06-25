@@ -19,6 +19,7 @@ node.stdout = node.process.stdout;
 node.homedir = node.os.homedir;
 node.resolve = node.path.resolve;
 node.fileURLToPath = node.url.fileURLToPath;
+node.createReadStream = node.fs.createReadStream;
 node.fsp = node.fs.promises;
 Object.freeze(node);
 
