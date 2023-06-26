@@ -1,5 +1,5 @@
 import node from './helpers/node.js';
-import { handleInput, up, cd, ls, cat, add, rn, cp } from './handles/handles.js';
+import { handleInput, up, cd, ls, cat, add, rn, cp, mv } from './handles/handles.js';
 import { parseArgs } from './helpers/helpers.js';
 
 
@@ -11,6 +11,7 @@ const dispatcher = {
   'add': (args) => add(args),
   'rn': (args) => rn(args),
   'cp': (args) => cp(args),
+  'mv': (args) => mv(args),
 }
 
 try {
