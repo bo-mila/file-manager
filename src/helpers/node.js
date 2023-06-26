@@ -12,6 +12,7 @@ node.process = process;
 node.chdir = node.process.chdir;
 node.nextTick = node.process.nextTick;
 node.exit = node.process.exit;
+node.arch = node.process.arch;
 node.argv = node.process.argv;
 node.stdin = node.process.stdin;
 node.cwd = node.process.cwd;
@@ -24,6 +25,9 @@ node.createWriteStream = node.fs.createWriteStream;
 node.fsp = node.fs.promises;
 node.parse = node.path.parse;
 node.pipeline = node['stream/promises'].pipeline;
+node.userInfo = node.os.userInfo;
+node.cpus = node.os.cpus;
+node.EOL = node.os.EOL;
 Object.freeze(node);
 
 export default node;

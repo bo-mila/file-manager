@@ -7,5 +7,7 @@ import { add } from './add.js';
 import { rn } from './rn.js';
 import { cp } from './cp.js';
 import { mv } from './mv.js';
+import { rm } from './rm.js';
+import { os } from './os/os.js';
 
-export { handleInput, up, cd, ls, cat, add, rn, cp, mv };
+export { handleInput, up, cd, ls, cat, add, rn, cp, mv, rm, os };
