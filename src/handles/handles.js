@@ -9,5 +9,6 @@ import { cp } from './cp.js';
 import { mv } from './mv.js';
 import { rm } from './rm.js';
 import { os } from './os/os.js';
+import { hash } from './hash.js';
 
-export { handleInput, up, cd, ls, cat, add, rn, cp, mv, rm, os };
+export { handleInput, up, cd, ls, cat, add, rn, cp, mv, rm, os, hash };

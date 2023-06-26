@@ -28,6 +28,7 @@ node.pipeline = node['stream/promises'].pipeline;
 node.userInfo = node.os.userInfo;
 node.cpus = node.os.cpus;
 node.EOL = node.os.EOL;
+node.createHash = node.crypto.createHash;
 Object.freeze(node);
 
 export default node;
