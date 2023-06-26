@@ -11,5 +11,6 @@ import { rm } from './rm.js';
 import { os } from './os/os.js';
 import { hash } from './hash.js';
 import { compress } from './compress.js';
+import { decompress } from './decompress.js';
 
-export { handleInput, up, cd, ls, cat, add, rn, cp, mv, rm, os, hash, compress };
+export { handleInput, up, cd, ls, cat, add, rn, cp, mv, rm, os, hash, compress, decompress };

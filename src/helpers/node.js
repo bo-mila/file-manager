@@ -30,6 +30,7 @@ node.cpus = node.os.cpus;
 node.EOL = node.os.EOL;
 node.createHash = node.crypto.createHash;
 node.createBrotliCompress = node.zlib.createBrotliCompress;
+node.createBrotliDecompress = node.zlib.createBrotliDecompress;
 Object.freeze(node);
 
 export default node;
